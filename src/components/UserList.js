@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
+import LocalStorage from "../services/LocalStorage"
 
 
 export default class UsersList extends Component {
@@ -8,34 +9,46 @@ export default class UsersList extends Component {
         super(props);
         this.myRef = React.createRef();
 
-        this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChangeUser = this.onChangeUser.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            username: '',
-            users: []
+            users: [],
+            selectedUser: props.selectedUser
         }
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/users')
+        axios.get('http://localhost:5000/accounts')
             .then(response => {
                 if(response.data.length > 0){
                     this.setState({
-                        users: response.data.map(user => user.username),
-                        username: response.data[0].username
+                        users: response.data,
+                        selectedUser: response.data[0]
                     });
                 }
             })
     }
 
-    onChangeUsername(e) {
+    onChangeUser(e) {
+        const username = e.target.value;
+        const user = this.state.users.find(user => user.username === username)
+        
         this.setState({
-            username: e.target.value
+            selectedUser: user
         });
     }
 
-
+    onSubmit(e) {
+        e.preventDefault();
     
+
+        LocalStorage.setObject("selectedUser", this.state.selectedUser)
+        
+
+        window.location.replace('/accountsList')
+    }
+
 
     render(){
         return(
@@ -47,17 +60,21 @@ export default class UsersList extends Component {
                     <select ref={this.myRef}
                         required
                         className="form-control"
-                        value={this.state.username}
-                        onChange={this.onChangeUsername}>
+                        value={this.state.selectedUser?.username}
+                        onChange={this.onChangeUser}>
                         {
                             this.state.users.map(function(user){
                                 return <option
-                                  key={user}
-                                  value={user}>{user}
+                                  key={user.id}
+                                  value={user.username}>{user.username}
                                   </option>;
                             })
                         }
                     </select>
+                </div>
+
+                <div className="form-group">
+                    <input type="submit" value="Acceder" className="btn btn-primary"/>
                 </div>
             </form>
         </div>    

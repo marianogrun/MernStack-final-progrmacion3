@@ -6,9 +6,9 @@ const accountSchema = new Schema ({
     username: { type: String, required: true},
     accountType: {type: String, required: true},
     clientType: {type: String, required: true},
-    nroCuenta: {type: Number, required: true},
+    accountNumber: {type: Number, required: true},
     cbu: {type: Number, requiered: true},
-    saldo: {type: Number, required: true}
+    balance: {type: Number, required: true}
 },{
     timestamps: true,
 });

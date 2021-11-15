@@ -20,12 +20,10 @@ connection.once('open', () => {
 })
 
 const accountsRouter = require ('./routes/accounts');
-const usersRouter = require ('./routes/users');
-const accountRouter = require ('./routes/accountsTypes');
+const movementsRouter = require ('./routes/movements');
 
 app.use('/accounts', accountsRouter);
-app.use('/users', usersRouter);
-app.use('/accountsTypes', accountRouter);
+app.use('/movements', movementsRouter);
 
 
 app.listen(port, () =>{

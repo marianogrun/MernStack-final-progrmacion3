@@ -1,26 +1,25 @@
-import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"
+import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from "./screens/SignUpScreen";
+import UserAccountsScreen from "./screens/UserAccountsScreen";
+import ViewMovementsScreen from "./screens/ViewMovementsScreen";
+import ExtractionScreen from "./screens/ExtractionScreen"
+import DepositScreen from "./screens/DepositScreen"
 
-import Navbar from "./components/navbar.component";
-import AccountsList from "./components/accounts-list.component";
-import EditBankingAccounts from "./components/edit-bankingaccounts.component";
-import CreateAccount from "./components/create-account.component";
-import CreateUser from "./components/create-user.component";
-import UsersList from "./components/users-list.component";
 
 function App() {
+  const [selectedUser, setSelectedUser] = useState()
   return (
     <Router>
-      <div className="container">
-        <Navbar />
-        <br/>
-        <Route path="/" exact component={UsersList} />
-        <Route path="/accountsList" component={AccountsList} />
-        <Route path="/edit/:id" component={EditBankingAccounts} />
-        <Route path="/create" component={CreateAccount} />
-        <Route path="/user" component={CreateUser} />
-      </div>
+      <Route path="/" exact component={() => <LoginScreen selectedUser={selectedUser} setSelectedUser={setSelectedUser} />} />
+      <Route path="/accountsList" component={() => <UserAccountsScreen />} />
+      <Route path="/movements" component={() => <ViewMovementsScreen />} />
+      {/* <Route path="/edit/:id" component={EditBankingAccounts} /> */}
+      <Route path="/create" component={SignUpScreen} />
+      <Route path="/createExtraction" component={ExtractionScreen} />
+      <Route path="/createDeposit" component={DepositScreen} />
     </Router>
   );
 }

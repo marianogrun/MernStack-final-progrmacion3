@@ -6,18 +6,16 @@ Para iniciar el server: cd backend -> nodemon server
 
 Para iniciar el front: en otra terminal, desde el root del proyecto: npm start
 
-Por el momento la página principal muestra el route "/" con un dropdown que muestra los usuarios alojados en la base de datos. Para crear un nuevo usuario ir a 'Create User'
-El usuario creado aparecerá como primera opción en el menú 'Create Account' para crear un usuario a su nombre. De todos modos por el momento la Cuenta puede ser creada con otro nombre de usuario.
+La página principal muestra el route "/" con un dropdown que contiene los usuarios alojados en la base de datos. Para crear un nuevo usuario ir a 'Sign Up': completar los campos 'username', 'Tipo de cuenta' y 'Tipo de Cliente'. 
+Este evento nos traerá de nuevo a la pantalla de 'Sign In' donde el nuevo usuario aparecerá como opción para loguearse en el dropdown. 
 
-Accounts muestra las cuenta creadas hasta el momento.
+Al ingresar con un user se ve solo los datos del user logueado: Username, Nro de cuenta, Saldo, CBU, Accciones (Ver movimientos, Depositar, Extraer).
 
-Mejoras a realizar:
+Ver Movimientos: si es un usuario nuevo mostrará una lista vacía. Si tiene movimientos previos muestra el tipo de movimiento: Monto, el estado de cuenta luego de realizado el movimiento exitosamente y la fecha del mismo. Para volver atrás presionar botón "Accounts".
 
-La página principal mostrará los usuarios creados en la base y el dropdown dará la opción de ingresar con un usuario como forma de autentificación. Mientras no haya usuario seleccionado, los demás menúes no se podrán ver y por lo tanto no habrá opción disponible.
+Depositar: Formulario que pide a depositar (siempre números positivos). Una vez realizado el movimiento con éxito se vuelve a los datos del cliente que deberá mostrar el saldo actualizado. A su vez este nuevo movimiento se podrá ver en el listado ingresando a 'Ver movimientos'. 
 
-Una vez seleccionado el user, se verá la info solo del usuario seleccionado. 
-
-Aun falta agregar las funcionalidades: Depósito, extracción y resumen de cuenta. 
+Extraer: Formulario que pide monto a Extraer (siempre números positivos). Una vez realizado el movimiento con éxito se vuelve a los datos del cliente que deberá mostrar el saldo actualizado. A su vez este nuevo movimiento se podrá ver en el listado ingresando a 'Ver movimientos'. 
 
 # Getting Started with Create React App
 
