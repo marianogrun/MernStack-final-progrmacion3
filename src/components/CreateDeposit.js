@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./LoggedNavbar";
-import Loggingbar from "./UnloggedNavbar";
 import LocalStorage from "../services/LocalStorage";
 
 const AccountsTypes = {

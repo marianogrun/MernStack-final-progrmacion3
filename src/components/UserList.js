@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios';
+import { fetchAccounts } from "../fetchdata";
 import "react-datepicker/dist/react-datepicker.css";
 import LocalStorage from "../services/LocalStorage"
 
@@ -19,7 +19,7 @@ export default class UsersList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/accounts')
+        fetchAccounts()
             .then(response => {
                 if(response.data.length > 0){
                     this.setState({

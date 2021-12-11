@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const Movement = require('../models/movement.model');
 
 const {getMovements, createMovements, getMovement, deleteMovement} = require('../controllers/movement.controller')
 

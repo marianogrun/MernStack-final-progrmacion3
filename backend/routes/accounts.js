@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const BankingAccount = require('../models/account.model');
 
 const {getAccounts, createAccounts, getAccount, deleteAccount, updateAccount} = require('../controllers/accounts.controller')
 

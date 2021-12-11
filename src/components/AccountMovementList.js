@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { fetchAccountMovements } from "../fetchdata";
 import LocalStorage from "../services/LocalStorage";
 import AccountMovementListItem from "./AccountMovementListItem";
-import LoggedNavbar from "./LoggedNavbar";
 
 export default class AccountMovementList extends Component {
 
@@ -22,7 +21,7 @@ export default class AccountMovementList extends Component {
   }
 
   renderMovements() {
-    return this.state.movements?.sort((a, b) => a.itemM > b.itemM ? 1 : -1)
+    return this.state.movements?.sort((a, b) => a.movement > b.movement ? 1 : -1)
     .map(movement => {
       return <AccountMovementListItem movement={movement} key={movement._id} />;
     })

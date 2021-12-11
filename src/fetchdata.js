@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-export const fetchUsers = () => axios.get('http://localhost:5000/users');
+export const fetchAccounts = () => axios.get('http://localhost:5000/accounts');
 
 
 export const fetchUserAccountsByUsername = (username) => axios.get(`http://localhost:5000/accounts?username=${username}`)

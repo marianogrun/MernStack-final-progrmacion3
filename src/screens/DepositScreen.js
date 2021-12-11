@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import CreateDeposit from "../components/CreateDeposit";
 import LoggedNavbar from "../components/LoggedNavbar";
-import UnloggedNavbar from "../components/UnloggedNavbar";
 
 
 function ExtractionScreen() {

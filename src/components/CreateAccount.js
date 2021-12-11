@@ -1,19 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./LoggedNavbar";
-import Loggingbar from "./UnloggedNavbar";
 
-const AccountsTypesOld = {
-    CUENTACORRIENTE: {
-        id: "CUENTACORRIENTE",
-        name: "Cuenta Corriente"
-    },
-    CAJADEAHORRO: {
-        id: "CAJADEAHORRO",
-        name: "Caja de Ahorro"
-    }
-};
 
 const AccountsTypes = [
     "Cuenta Corriente",

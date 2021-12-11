@@ -16,7 +16,6 @@ function App() {
       <Route path="/" exact component={() => <LoginScreen selectedUser={selectedUser} setSelectedUser={setSelectedUser} />} />
       <Route path="/accountsList" component={() => <UserAccountsScreen />} />
       <Route path="/movements" component={() => <ViewMovementsScreen />} />
-      {/* <Route path="/edit/:id" component={EditBankingAccounts} /> */}
       <Route path="/create" component={SignUpScreen} />
       <Route path="/createExtraction" component={ExtractionScreen} />
       <Route path="/createDeposit" component={DepositScreen} />
