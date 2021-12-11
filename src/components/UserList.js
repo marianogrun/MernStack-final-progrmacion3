@@ -13,8 +13,7 @@ export default class UsersList extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            users: [],
-            selectedUser: props.selectedUser
+            users: []
         }
     }
 

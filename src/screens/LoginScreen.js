@@ -4,13 +4,13 @@ import UnloggedNavbar from "../components/UnloggedNavbar";
 import UsersList from "../components/UserList";
 
 
-function LoginScreen({selectedUser, setSelectedUser}) {
+function LoginScreen() {
     
   return (
       <div className="container">
         <UnloggedNavbar />
         <br/>
-        <UsersList selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+        <UsersList />
       </div>
   );
 }

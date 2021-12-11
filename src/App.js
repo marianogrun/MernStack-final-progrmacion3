@@ -10,10 +10,9 @@ import DepositScreen from "./screens/DepositScreen"
 
 
 function App() {
-  const [selectedUser, setSelectedUser] = useState()
   return (
     <Router>
-      <Route path="/" exact component={() => <LoginScreen selectedUser={selectedUser} setSelectedUser={setSelectedUser} />} />
+      <Route path="/" exact component={() => <LoginScreen />} />
       <Route path="/accountsList" component={() => <UserAccountsScreen />} />
       <Route path="/movements" component={() => <ViewMovementsScreen />} />
       <Route path="/create" component={SignUpScreen} />
