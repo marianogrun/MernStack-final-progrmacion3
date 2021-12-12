@@ -74,7 +74,7 @@ export default class CreateExtraction extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Monto a extraer: </label>
-                        <input type="text"
+                        <input type="number"
                             required
                             className="form-control"
                             value={this.state.amount}

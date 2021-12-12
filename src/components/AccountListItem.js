@@ -13,6 +13,8 @@ const AccountListItem = ({ bankingAcc }) => (
         <td>{bankingAcc.accountNumber}</td>
         <td>{formatPriceAmount(bankingAcc.balance)}</td>
         <td>{bankingAcc.cbu}</td>
+        <td>{bankingAcc.clientType}</td>
+        <td>{bankingAcc.accountType}</td>
         <td>
             <Link to={"/movements?accountId=" + bankingAcc._id}> Ver Movimientos </Link>
             | <Link to="/createDeposit"> Depositar </Link>

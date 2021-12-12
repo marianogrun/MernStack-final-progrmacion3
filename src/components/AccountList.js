@@ -36,6 +36,8 @@ export default class AccountsList extends Component {
                             <th>Nro de Cuenta</th>
                             <th>Saldo</th>
                             <th>CBU</th>
+                            <th>Cliente</th>
+                            <th>Tipo</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
