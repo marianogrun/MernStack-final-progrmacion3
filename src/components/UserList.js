@@ -52,10 +52,10 @@ export default class UsersList extends Component {
     render(){
         return(
         <div>
-            <h3>Users List</h3>
+            <h3>Listado de usuarios</h3>
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label>Username: </label>
+                    <label>Usuario: </label>
                     <select ref={this.myRef}
                         required
                         className="form-control"

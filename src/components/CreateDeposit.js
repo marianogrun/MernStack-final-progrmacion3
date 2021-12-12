@@ -70,7 +70,7 @@ export default class CreateDeposit extends Component {
     render() {
         return (
             <>
-                <h3>Made a new Deposit</h3>
+                <h3>Realizar un nuevo deposito</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Monto a Depositar: </label>

@@ -17,12 +17,12 @@ const LoggedNavbar = () => {
             <ul className="navbar-nav mr-auto" style={{ flex: 1 }}>
                 <li className="navbar-item" style={{ flex: 1 }}>
                     <Link to="/accountsList" className={getLinkClassName(location, "/accountsList")}>
-                        Accounts
+                        Cuentas
                         </Link>
                 </li>
                 <li className="navbar-item">
                     <Link to="/" className={getLinkClassName(location, "/")}>
-                        Logout
+                        Salir
                         </Link>
                 </li>
             </ul>

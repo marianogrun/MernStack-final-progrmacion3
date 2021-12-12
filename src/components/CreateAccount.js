@@ -79,10 +79,10 @@ export default class CreateAccount extends Component {
     render() {
         return (
             <>
-                <h3>Create New account</h3>
+                <h3>Crear una nueva cuenta</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Username: </label>
+                        <label>Usuario: </label>
                         <input type="text"
                             required
                             className="form-control"
@@ -121,7 +121,7 @@ export default class CreateAccount extends Component {
                     </div>
 
                     <div className="form-group">
-                        <input type="submit" value="Create Account Log" className="btn btn-primary" />
+                        <input type="submit" value="Crear registro de cuenta" className="btn btn-primary" />
                     </div>
                 </form>
             </>

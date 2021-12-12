@@ -70,7 +70,7 @@ export default class CreateExtraction extends Component {
     render() {
         return (
             <>
-                <h3>Made a new Extraction</h3>
+                <h3>Realizar una nueva extracción</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Monto a extraer: </label>

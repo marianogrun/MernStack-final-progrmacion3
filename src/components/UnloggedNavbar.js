@@ -18,12 +18,12 @@ const UnloggedNavbar = () => {
                 <ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
                         <Link to="/" className={getLinkClassName(location, "/")}>
-                            Sign in
+                            Ingresar
                         </Link>
                     </li>
                     <li className="navbar-item">
                         <Link to="/create" className={getLinkClassName(location, "/create")}>
-                            Sign up
+                            Registrarme
                         </Link>
                     </li>
                 </ul>

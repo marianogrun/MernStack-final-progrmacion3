@@ -28,11 +28,11 @@ export default class AccountsList extends Component {
     render() {
         return (
             <>
-                <h3>Accounts</h3>
+                <h3>Cuentas</h3>
                 <table className="table">
                     <thead className="thead-light">
                         <tr>
-                            <th>Username</th>
+                            <th>Usuario</th>
                             <th>Nro de Cuenta</th>
                             <th>Saldo</th>
                             <th>CBU</th>
